@@ -11,3 +11,9 @@
 npm install
 npm run dev
 ```
+
+# Docker
+```shell
+docker build -t telekom-project-launchpad .
+docker run -p 5173:5173 telekom-project-launchpad
+```

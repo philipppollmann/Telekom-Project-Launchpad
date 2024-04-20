@@ -1,25 +1,25 @@
-# Step 1: Build the app in a node.js environment
-FROM node:14 as build
+# Stage 1: Build the vite react application
+FROM node:16-alpine as build
 
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 COPY . .
 
-RUN npm run build
+RUN npx vite build
 
-# Step 2: Serve the app from a lightweight node environment
-FROM node:14-alpine
+# Stage 2: Serve the application using a lightweight node server
+FROM node:16-alpine
 
 WORKDIR /app
 
-COPY --from=build /app/dist ./dist
-
 RUN npm install -g serve
 
-EXPOSE 5000
+COPY --from=build /app/dist /app
 
-CMD ["serve", "-s", "dist"]
+EXPOSE 3000
+
+CMD ["serve", "-s", ".", "-l", "3000"]
