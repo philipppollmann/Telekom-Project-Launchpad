@@ -1,18 +1,30 @@
-name: Build and Push Docker Image
+name: Build and Push Docker image
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.ts'
+      - '**.tsx'
+      - 'vite.config.ts'
+      - 'Dockerfile'
+      - 'package.json'
+      - 'package-lock.json'
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v2
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Log in to GitHub Container Registry
         uses: docker/login-action@v1
@@ -27,7 +39,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ghcr.io/philipppollmann/telekom-project-launchpad:latest
-
-      - name: Verify image
-        run: docker run --rm ghcr.io/philipppollmann/telekom-project-launchpad:latest
+          tags: ghcr.io/philipppollmann/telekom-project-launchpad/app:${{ github.sha }}
+          labels: |
+            org.opencontainers.image.source=github.com/philipppollmann/Telekom-Project-Launchpad
+            org.opencontainers.image.author=philipppollmann
