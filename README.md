@@ -1,3 +1,4 @@
+![Telekom Banner](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Telekom_Deutschland_Logo_Claim.svg/1200px-Telekom_Deutschland_Logo_Claim.svg.png)
 # Telekom-Project-Launchpad
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
