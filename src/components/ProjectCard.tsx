@@ -1,19 +1,29 @@
 import {ScaleCard} from "@telekom/scale-components-react";
+import {Project} from "../model/Project.ts";
 
-export function ProjectCard() {
+interface ProjectCardProps {
+    project: Project;
+}
 
+
+export function ProjectCard({ project }: ProjectCardProps) {
     return (
-        <div className="">
-            <ScaleCard to="" target="">
-                <div>
-                    <img
-                        className="mb-1 w-full" // tailwindcss class
-                        src="https://coralogix.com/wp-content/uploads/2021/06/Argo-CD-Version-Tags-1000X1000.png"
-                        alt="ArgoCD Icon"
-                    />
-                    <div></div>
-                </div>
-            </ScaleCard>
-        </div>
-    )
+        <>
+            <div className="w-1/6 m-6">
+                <ScaleCard to={project.to} target={project.target}>
+                    <div>
+                        <img
+                            className="mb-1 h-48 justify-center items-center" // tailwindcss class
+                            src={project.iconSrc}
+                            alt={`${project.title} Icon`}
+                        />
+                        <div>
+                            <h3 className="text-lg font-bold">{project.title}</h3>
+                            <p>{project.description}</p>
+                        </div>
+                    </div>
+                </ScaleCard>
+            </div>
+        </>
+    );
 }
