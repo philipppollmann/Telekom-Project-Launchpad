@@ -16,7 +16,7 @@ export default function getProjects(): Project[]{
             "KeyCloak",
             "An identity and access management solution.",
             "",
-            "https://www.keycloak.org/",
+            "keycloak.localhost",
             "",
             "https://static-00.iconduck.com/assets.00/keycloak-icon-2048x2048-5ge904so.png"
         ),
@@ -24,7 +24,7 @@ export default function getProjects(): Project[]{
             "Traefik",
             "A modern HTTP reverse proxy and load balancer.",
             "",
-            "https://traefik.io/traefik/",
+            "http://traefik.localhost",
             "",
             "https://upload.wikimedia.org/wikipedia/commons/1/1b/Traefik.logo.png"
         ),
@@ -32,7 +32,7 @@ export default function getProjects(): Project[]{
             "Prometheus",
             "A monitoring and alerting toolkit.",
             "",
-            "https://traefik.io/traefik/",
+            "http://prometeus.localhost",
             "",
             "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Prometheus_software_logo.svg/2066px-Prometheus_software_logo.svg.png"
         ),
@@ -40,7 +40,7 @@ export default function getProjects(): Project[]{
             "AlertManager",
             "A Prometheus alert manager.",
             "",
-            "https://traefik.io/traefik/",
+            "http://alertmanager.localhost",
             "",
             "https://devopy.io/wp-content/uploads/2019/02/bell_260.svg"
         ),
@@ -48,7 +48,7 @@ export default function getProjects(): Project[]{
             "Grafana",
             "A analytics and visualization web application.",
             "",
-            "https://traefik.io/traefik/",
+            "http://grafana.localhost",
             "",
             "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Grafana_icon.svg/1969px-Grafana_icon.svg.png"
         ),
@@ -104,7 +104,7 @@ export default function getProjects(): Project[]{
             "InfluxDB",
             "A time series database.",
             "",
-            "https://traefik.io/traefik/",
+            "https://www.influxdata.com/products/influxdb/",
             "",
             "https://static-00.iconduck.com/assets.00/influxdb-icon-2017x2048-38lz5101.png"
         ),
@@ -112,7 +112,7 @@ export default function getProjects(): Project[]{
             "Kyverno",
             "A policy engine designed for Kubernetes.",
             "",
-            "https://traefik.io/traefik/",
+            "https://kyverno.io/",
             "",
             "https://repository-images.githubusercontent.com/169108858/35923880-823a-11e9-9089-0c9c102f9e6f"
         ),
@@ -120,7 +120,7 @@ export default function getProjects(): Project[]{
             "GitHub",
             "A Git repository hosting service.",
             "",
-            "https://traefik.io/traefik/",
+            "https://github.com/philipppollmann/Telekom-Project-Launchpad",
             "",
             "https://cdn-icons-png.flaticon.com/512/25/25231.png"
         ),
