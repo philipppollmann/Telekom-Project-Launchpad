@@ -5,7 +5,6 @@ export function AppHeader(){
         <>
             <div className="top-0">
                 <ScaleAppHeader>
-
                 </ScaleAppHeader>
             </div>
         </>

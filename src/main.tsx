@@ -7,6 +7,7 @@ import '@telekom/scale-components/dist/scale-components/scale-components.css';
 
 applyPolyfills().then(() => {
     defineCustomElements(window);
+    document.title = "Telekom Project Launchpad";
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
