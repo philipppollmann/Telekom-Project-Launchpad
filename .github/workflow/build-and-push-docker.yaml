@@ -27,5 +27,5 @@ jobs:
           push: true
           tags: ghcr.io/philipppollmann/telekom-project-launchpad/app:${{ github.sha }}
           labels: |
-            org.opencontainers.image.source=investment-alert-system/investment-alert-frontend
+            org.opencontainers.image.source=philipppollmann/telekom-project-launchpad
             org.opencontainers.image.author=philipppollmann
